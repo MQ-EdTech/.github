@@ -1,0 +1,60 @@
+name: Majordomo Feedback (Students)
+description: Share what's working, what's confusing, and ideas for Majordomo.
+title: "[Feedback] "
+labels: ["feedback", "majordomo"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Public issue — privacy reminder
+
+        This issue is **public** — anyone on the internet can read it.
+
+        - **Do not** include your student number, full name, email, or other personal info.
+        - It is fine to file anonymously — pick a GitHub username that does not identify you if you prefer.
+
+  - type: input
+    id: unit
+    attributes:
+      label: Unit / assignment (optional)
+      description: e.g. COMP1010, Week 4 prac, "Bouncing ball" exercise. Helps us know what you are talking about — please do not include student details.
+      placeholder: e.g. COMP1010 Week 4
+    validations:
+      required: false
+
+  - type: dropdown
+    id: type
+    attributes:
+      label: What kind of feedback is this?
+      options:
+        - Praise — something I liked
+        - Bug — something did not work
+        - Confusion — something unclear or hard to understand
+        - Suggestion — idea for improvement
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: working
+    attributes:
+      label: What's working well?
+      description: Anything you found helpful, clear, or enjoyable.
+    validations:
+      required: false
+
+  - type: textarea
+    id: frustrating
+    attributes:
+      label: What's frustrating or unclear?
+      description: Anything confusing, broken, or annoying.
+    validations:
+      required: false
+
+  - type: textarea
+    id: other
+    attributes:
+      label: Other thoughts or suggestions
+      description: Anything else — ideas, requests, observations.
+    validations:
+      required: false
